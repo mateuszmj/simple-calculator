@@ -75,14 +75,16 @@ function addToArr(method, value) {
 // Update screen value
 
 function updateScreen() {
+    const equation = arr.join(" ").replace(/[/]/g, "÷").replace(/[*]/g, "x").toString();
+    sum = sum.toString();
 
-    const equation = arr.join(" ").replace(/[/]/g, "÷").replace(/[*]/g, "x");
-    displayTop.innerText = equation;
+    if (!/\d/.test(sum)) { sum = "Don't do that!"; }
 
-    if (sum == "Infinity" || isNaN(sum)) { sum = "Don't do that!"; }
-    sum = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    const sum_parts = sum.split(".");
+    sum_parts[0] = sum_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    sum = sum_parts.join(".");
 
-    if (sum.toString().length > 6 || equation.toString().length > 13) {
+    if (sum.length > 6 || equation.length > 13) {
         displayTop.classList.add("calc__screen-top--small");
         displayBottom.classList.add("calc__screen-bottom--small");
     } else {
@@ -90,6 +92,7 @@ function updateScreen() {
         displayBottom.classList.remove("calc__screen-bottom--small");
     }
 
+    displayTop.innerText = equation;
     displayBottom.innerText = sum;
 }
 
