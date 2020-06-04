@@ -80,6 +80,7 @@ function updateScreen() {
     displayTop.innerText = equation;
 
     if (sum == "Infinity" || isNaN(sum)) { sum = "Don't do that!"; }
+    sum = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     if (sum.toString().length > 6 || equation.toString().length > 13) {
         displayTop.classList.add("calc__screen-top--small");
