@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="calc">
+            <div class="calc__screen">
+                <div class="calc__screen-top"></div>
+                <div class="calc__screen-bottom">0</div>
+            </div>
+            <div class="calc__keyboard">
+                <div class="calc__keyboard-line">
+                    <button data-idx="ac" class="calc__keyboard-key calc__keyboard-key--color1">AC</button>
+                    <div class="calc__keyboard-key-empty calc__keyboard-key--color1"></div>
+                    <div class="calc__keyboard-key-empty calc__keyboard-key--color1"></div>
+                    <button data-idx="/" class="calc__keyboard-key calc__keyboard-key--color2">&#247;</button>
+                </div>
+                <div class="calc__keyboard-line">
+                    <button data-idx="."
+                        class="calc__keyboard-key calc__keyboard-key--color3 calc__keyboard-key--bold">.</button>
+                    <button data-idx="0" class="calc__keyboard-key calc__keyboard-key--color3">0</button>
+                    <div class="calc__keyboard-key-empty calc__keyboard-key--color3"></div>
+                    <button data-idx="*" class="calc__keyboard-key calc__keyboard-key--color2">x</button>
+                </div>
+                <div class="calc__keyboard-line">
+                    <button data-idx="1" class="calc__keyboard-key calc__keyboard-key--color3">1</button>
+                    <button data-idx="2" class="calc__keyboard-key calc__keyboard-key--color3">2</button>
+                    <button data-idx="3" class="calc__keyboard-key calc__keyboard-key--color3">3</button>
+                    <button data-idx="-" class="calc__keyboard-key calc__keyboard-key--color2">-</button>
+                </div>
+                <div class="calc__keyboard-line">
+                    <button data-idx="4" class="calc__keyboard-key calc__keyboard-key--color3">4</button>
+                    <button data-idx="5" class="calc__keyboard-key calc__keyboard-key--color3">5</button>
+                    <button data-idx="6" class="calc__keyboard-key calc__keyboard-key--color3">6</button>
+                    <button data-idx="+" class="calc__keyboard-key calc__keyboard-key--color2">+</button>
+                </div>
+                <div class="calc__keyboard-line">
+                    <button data-idx="7" class="calc__keyboard-key calc__keyboard-key--color3">7</button>
+                    <button data-idx="8" class="calc__keyboard-key calc__keyboard-key--color3">8</button>
+                    <button data-idx="9" class="calc__keyboard-key calc__keyboard-key--color3">9</button>
+                    <button data-idx="=" class="calc__keyboard-key calc__keyboard-key--color2">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
